@@ -1,8 +1,18 @@
 </div>
 </main>
 
-<footer class="text-center mt-5">
-  Copyright &copy; 2025
+<footer class="bg-dark text-center text-warning mt-5 w-100 h-40 ">
+<p class="useful-links">
+    <h3>Links</h3>
+    <hr>
+    <a href="index.php" class="text-white">Add Feedback</a> |
+    <a href="feedback.php" class="text-white">Past Feedback</a> |
+    <a href="about.php" class="text-white">About</a>
+  </p>
+
+Copyright &copy; 2025
+
+  
 </footer>
  
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 

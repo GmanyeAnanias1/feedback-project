@@ -3,7 +3,7 @@
 
 
 <?php
-// Set vars to empty values
+// Set variables to empty values
 $name = $email = $body = '';
 $nameErr = $emailErr = $bodyErr = '';
 
@@ -45,7 +45,11 @@ if (isset($_POST['submit'])) {
     // add to database
     $sql = "INSERT INTO feedback (name, email, body) VALUES ('$name', '$email', '$body')";
     if (mysqli_query($conn, $sql)) {
+      
       // success
+
+      echo 'Feedback submitted successfully';
+
       header('Location: feedback.php');
     } else {
       // error
@@ -55,7 +59,10 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<img src="/log-removebg.png" class="w-25 mb-3" alt="Not Available">
+<img src="<?php echo 'images/legacy.jpg'; ?>" 
+     style="width: 70px; height: auto; border-radius: 50%;" 
+     alt="No Image Available">
+
 
     <h2>Feedback</h2>
     <?php echo isset($name) ? $name : ''; ?>
@@ -72,6 +79,7 @@ if (isset($_POST['submit'])) {
           Please provide a valid name.
         </div>
       </div>
+      
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
         <input type="email" class="form-control <?php echo !$emailErr ?:

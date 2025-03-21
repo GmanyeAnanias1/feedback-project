@@ -13,6 +13,14 @@
 <body>
   <nav class="navbar navbar-expand-sm navbar-light bg-light mb-4">
     <div class="container">
+      <!-- <Logo images"> -->
+   
+      <a href="index.php">
+    <img src="<?php echo 'images/legacy.jpg'; ?>" 
+     style="width: 60px; height: auto; border-radius: 50%; margin-left: -15px;" 
+     alt="No Image Available">
+    </a>
+
       <a class="navbar-brand" href="#">Legacy I.T Solutions</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
