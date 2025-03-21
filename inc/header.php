@@ -9,6 +9,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>Leave Feedback</title>
+
+  <style>
+    .nav-link:hover {
+      text-decoration: underline;
+    color: blue !important; 
+}
+
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-sm navbar-light bg-light mb-4">
@@ -21,20 +29,23 @@
      alt="No Image Available">
     </a>
 
-      <a class="navbar-brand" href="#">Legacy I.T Solutions</a>
+      <a class="navbar-brand fw-bold text-warning" href="#">Legacy I.T Solutions</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.php">Add Feedback</a>
+         
+        <li class="nav-item">
+          <a class="nav-link text-dark hover:text-danger" href="index.php">Add Feedback</a>
+
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="feedback.php">Past Feedback</a>
+            <a class="nav-link text-dark hover:text-danger" href="feedback.php">Past Feedback</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="about.php">About</a>
+            <a class="nav-link text-dark hover:text-danger" href="about.php">About</a>
           </li>
         </ul>
       </div>
