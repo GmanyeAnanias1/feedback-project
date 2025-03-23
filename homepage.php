@@ -13,6 +13,32 @@
         height: 100vh; /* Full screen height */
         width: 100%;
     }
+
+    .service-icon {
+        font-size: 3rem;
+        color: #f39c12;
+        border-radius: 50%;
+    }
+
+    .service-icon:hover {
+        color:rgb(211, 210, 207);
+        transition: 0.3s;
+    }
+    .service-trans {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .service-trans:hover {
+        background-color:rgb(30, 31, 31); 
+        color: red; /* Change text color */
+        transform: scale(1.05); /* Slightly enlarge */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow */
+    }
+
+    .service-trans:hover .service-icon {
+        color: yellow; /* Change icon color on hover */
+    }
+    
 </style>
 
 
@@ -22,21 +48,21 @@
             <h2 class="fw-bold">Our Services</h2>
             <div class="row mt-4">
                 <div class="col-md-4">
-                    <div class="p-4 shadow rounded bg-white">
+                    <div class=" service-trans p-4 shadow rounded bg-white">
                         <i class="service-icon fas fa-code"></i>
                         <h5 class="mt-3">Software Development</h5>
                         <p>We build cutting-edge applications tailored to your business needs.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 shadow rounded bg-white">
+                    <div class="service-trans p-4 shadow rounded bg-white">
                         <i class="service-icon fas fa-shield-alt"></i>
                         <h5 class="mt-3">Cybersecurity</h5>
                         <p>Protect your data and infrastructure with our top-tier security solutions.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 shadow rounded bg-white">
+                    <div class="service-trans p-4 shadow rounded bg-white">
                         <i class="service-icon fas fa-cloud"></i>
                         <h5 class="mt-3">Cloud Solutions</h5>
                         <p>Seamless cloud integration and management for businesses of all sizes.</p>
