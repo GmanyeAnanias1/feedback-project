@@ -1,4 +1,3 @@
-
 <?php include 'inc/header.php'; ?>
 
 
@@ -13,19 +12,13 @@ if (isset($_POST['submit'])) {
   if (empty($_POST['name'])) {
     $nameErr = 'Name is required';
   } else {
-    // $name = filter_var($_POST['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $name = filter_input(
-      INPUT_POST,
-      'name',
-      FILTER_SANITIZE_FULL_SPECIAL_CHARS
-    );
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
   }
 
   // Validate email
   if (empty($_POST['email'])) {
     $emailErr = 'Email is required';
   } else {
-    // $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
   }
 
@@ -33,24 +26,17 @@ if (isset($_POST['submit'])) {
   if (empty($_POST['body'])) {
     $bodyErr = 'Body is required';
   } else {
-    // $body = filter_var($_POST['body'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $body = filter_input(
-      INPUT_POST,
-      'body',
-      FILTER_SANITIZE_FULL_SPECIAL_CHARS
-    );
+    $body = filter_input(INPUT_POST, 'body', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
   }
 
   if (empty($nameErr) && empty($emailErr) && empty($bodyErr)) {
     // add to database
     $sql = "INSERT INTO feedback (name, email, body) VALUES ('$name', '$email', '$body')";
     if (mysqli_query($conn, $sql)) {
-      
       // success
-
       echo 'Feedback submitted successfully';
-
       header('Location: feedback.php');
+      exit(); // Ensure no further code is executed after redirection
     } else {
       // error
       echo 'Error: ' . mysqli_error($conn);
@@ -95,4 +81,4 @@ if (isset($_POST['submit'])) {
       </div>
     </form>
 
-<?php include 'inc/footer.php'; ?> 
+<?php include 'inc/footer.php'; ?>

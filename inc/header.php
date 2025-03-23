@@ -16,6 +16,20 @@
     color: blue !important; 
 }
 
+
+
+
+.text-justify {
+    text-align: justify;
+}
+
+.fixed-width {
+    max-width: 800px; 
+    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
   </style>
 </head>
 <body>
@@ -31,11 +45,15 @@
 
       <a class="navbar-brand fw-bold text-warning" href="#">Legacy I.T Solutions</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon border-danger"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
          
+        <li class="nav-item">
+          <a class="nav-link text-dark hover:text-danger" href="homepage.php">Home</a>
+
+          </li>
         <li class="nav-item">
           <a class="nav-link text-dark hover:text-danger" href="index.php">Add Feedback</a>
 
